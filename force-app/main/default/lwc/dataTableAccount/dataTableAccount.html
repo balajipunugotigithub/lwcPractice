@@ -1,0 +1,28 @@
+<template>
+    <lightning-card>
+        <table id="myTable">
+            <tbody> 
+                <tr>
+                    <th>S.No</th>
+                    <th>Account Name</th>
+                    <th>Account Phone</th>
+                    <th>Account Industry</th>
+                </tr>
+                
+                    <template for:each={accounts} for:item="account" for:index="index">
+                        <tr class="row" key = {account.Id}>
+                            <td>{account.sno}</td>
+                            <td><lightning-input data-id="name-input" value={account.record.Name}></lightning-input></td>
+                            <td><lightning-input data-id="phone-input" value={account.record.Phone}></lightning-input></td>
+                            <td><lightning-input data-id="industry-input" value={account.record.Industry}></lightning-input></td>
+                            <td><lightning-icon icon-name="action:new" data-id="123" alternative-text="New" title="New" size="xx-small" data-recid={account.record.Id} onclick={addRow}></lightning-icon></td>
+                            <td><lightning-icon icon-name="action:delete" alternative-text="Delete" title="Delete" size="xx-small" onclick={deleteHandler}></lightning-icon></td>
+                        </tr>
+                        
+                    </template>
+            </tbody>
+        </table>
+        
+        
+    </lightning-card>
+</template>

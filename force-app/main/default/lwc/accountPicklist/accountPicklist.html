@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Display Account Picklist">
+      <lightning-combobox
+        name="Account Name"
+        label="Select Account"
+        value={value}
+        placeholder="Select Account"
+        options={picklistOptions}
+        
+        onchange={handleChange}
+      ></lightning-combobox>
+      <p>Selected value is: {value}</p>
+    </lightning-card>
+  </template>

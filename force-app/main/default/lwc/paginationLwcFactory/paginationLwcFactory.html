@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Lightning DataTable with Pagination">
+
+        <div style="height: 200px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={recordsToDisplay}
+                    columns={displayColumns}
+                    >
+            </lightning-datatable>
+        </div>
+
+        <lightning-layout>
+            <lightning-layout-item class="slds-p-around_medium slds-text-align_left" alignment-bump="left">
+                <lightning-button label="First" onclick={handleFirst} ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-p-around_medium slds-text-align_Right" alignment-bump="right">
+                <lightning-button label="Previous" onclick={handlePrevious} disabled={handledisableprev}></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-p-around_medium slds-text-align_left" alignment-bump="left">
+                <lightning-button label="Next" onclick={handleNext} disabled={handledisable}></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-p-around_medium slds-text-align_Right" alignment-bump="right">
+                <lightning-button label="Last" onclick={handleLast}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </lightning-card>
+</template>

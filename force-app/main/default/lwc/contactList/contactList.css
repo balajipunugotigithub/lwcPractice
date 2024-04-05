@@ -1,0 +1,9 @@
+/* contactList.css */
+.normal {
+    color: green;
+}
+
+.highlight {
+    color: red;
+    font-size: large;
+}

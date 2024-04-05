@@ -1,0 +1,19 @@
+<template>
+    
+    <lightning-card>
+        <div class="center-card-title">Insert Create Account</div>
+        <lightning-input name="Name" class="validation name balaji" label="Account Name" type="text" onchange={handleAccountName} ></lightning-input>
+        <lightning-input name="AnnualRevenue" class="validation name balaji" label="Annual Revenue" type="number" onchange={handleAnnualRevenue}></lightning-input>
+        <lightning-combobox name="Industry" class="validation name balaji" label="Industry" value={industry} 
+        placeholder="--None--" options={optionsList} onchange={handleIndustry}>
+        </lightning-combobox>
+        <lightning-button type="submit" label="Insert" variant="brand" onclick={handleInsert}></lightning-button>
+        <lightning-file-upload 
+        label="Upload File" name="fileUploader" accept=".pdf" record-id={myRecordId}
+        onuploadfinished={handleUploadFinished} multiple="false">
+       </lightning-file-upload>
+
+
+    </lightning-card>
+
+</template>

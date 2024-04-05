@@ -1,0 +1,15 @@
+<template>
+    
+        <lightning-card>
+            <div class="center-card-title">Create Account</div>
+            <lightning-input name="Name" label="Account Name" type="text" onchange={handleInputChange} required="true"></lightning-input>
+            <lightning-input name="AnnualRevenue" label="Annual Revenue" type="number" onchange={handleInputChange}></lightning-input>
+            <lightning-combobox name="Industry" label="Industry" value={industry} 
+            placeholder="--None--" options={optionsList} onchange={handleInputChange}>
+            </lightning-combobox>
+            <lightning-button type="submit" label="Insert" variant="brand" onclick={handleInsert}></lightning-button>
+
+
+        </lightning-card>
+   
+</template>

@@ -1,0 +1,11 @@
+.new-color {
+    background-color: lightgreen;
+  }
+  
+  .in-progress-color {
+    background-color: orange;
+  }
+  
+  .finished-color {
+    background-color: lightblue;
+  }

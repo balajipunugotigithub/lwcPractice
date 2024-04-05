@@ -1,0 +1,36 @@
+<template>
+    <lightning-card>
+       
+        <template for:each={itemsToDisplay} for:item="item" for:index="index">
+
+            <div key={item.Id}>
+            <lightning-layout class="alignlayout">
+                <lightning-layout-item >
+                    <lightning-output-field field-name="Id" >{item.Id}</lightning-output-field>
+                </lightning-layout-item>
+                <lightning-layout-item >
+                    <lightning-input label="Account Name" type="text" value={item.name} onchange={handleName} data-id={item.id} data-index={index}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item >
+                    <lightning-input label="Account Phone" type="text" ></lightning-input>
+                </lightning-layout-item >
+                <lightning-layout-item >
+                    <lightning-input label="Account site" type="text"  ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item >
+                    <lightning-button-icon icon-name="utility:adduser" variant="brand" alternative-text="Add user" class="slds-m-left_xx-small " onclick={rotateLoop} title="Add user" data-index={index}></lightning-button-icon>
+                </lightning-layout-item>
+                <lightning-layout-item >
+                    <lightning-button-icon icon-name="utility:delete" variant="brand" alternative-text="Delete"   class="slds-m-left_xx-small " title="Delete" onclick={removeItem} data-id={item.id} data-index={index} ></lightning-button-icon>
+                </lightning-layout-item>            
+        </lightning-layout>
+        </div>
+
+        </template>
+        
+    
+        <lightning-button-icon icon-name="utility:save" variant="brand" alternative-text="Save" class="slds-m-left_xx-small" title="Save"></lightning-button-icon>
+
+    </lightning-card>
+    
+</template>
